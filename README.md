@@ -1,52 +1,35 @@
-# Full-Stack Development 🚀
+👋 Hi, I’m Ntale N Derick  
 
-This repository contains my projects, practice exercises, and notes from my journey as a Full-Stack Developer in training through [freeCodeCamp.org](https://www.freecodecamp.org).
+💻 Full-Stack Developer | Digital Marketing Strategist | Founder of Marktopia 
+Turning code & creativity into business growth 🚀  
 
----
+👨‍💻 About Me  
+I develop scalable web apps and drive digital growth.  
 
-## 📚 Topics Covered
-- HTML5 & CSS3
-- Responsive Web Design
-- JavaScript (ES6+)
-- Frontend Libraries (React)
-- Backend Development (Node.js, Express)
-- Databases (MongoDB, SQL basics)
-- Python (for backend & scripting)
+- Full-Stack (React, Node.js, Express, MongoDB, APIs)
+- Web Design, WordPress
 
----
+- SEO, Social Media, PPC, Email
 
-## 📂 Repository Structure
-- `/html-css/` → Basic HTML & CSS projects
-- `/javascript/` → JavaScript algorithms and projects
-- `/frontend/` → Frontend libraries and frameworks
-- `/backend/` → Backend projects with Node.js, Express, MongoDB
-- `/python/` → Python practice and small apps
+- Branding, Creative Design  
 
----
+My mission is to help African SMEs and global businesses use modern web technologies and digital marketing to streamline operations, 
+improve customer engagement, and drive growth.  
 
-## 🎯 Goals
-- Build a strong foundation in full-stack development
-- Create portfolio-ready projects
-- Prepare for freelancing and professional developer roles
+⚡ Tech Stack  
+Frontend: HTML, CSS, JavaScript, React  
+Backend: Node.js, Express, MongoDB  
+Other Tools: Git, WordPress, SEO Tools, Google Analytics  
 
----
+ 📌 Current Projects  
+- 🌐 Building Marktopia a digital marketing & development agency for SMEs  
+- 🛠 Expanding my portfolio of full-stack web apps
+- 📈 Sharing insights on tech + marketing for growth  
 
-## 🛠️ Tools & Technologies
-- **Editor:** VS Code  
-- **Version Control:** Git & GitHub  
-- **Hosting:** GitHub Pages, Heroku, Render  
-- **Others:** npm, Node.js, Postman  
+📫 Let’s Connect  
+- 📧 Email: ntalenderick@gmail.com
+- 💼 LinkedIn: linkedin.com/in/n-derick-ntale-57711a224
+- 💻 GitHub: github.com/Der324 
+- 📱 WhatsApp: +250786864031  
 
----
-
-## 🤝 Contributing
-This is a personal learning repo, but feedback and suggestions are always welcome!  
-Feel free to open an issue or PR.
-
----
-
-## 📬 Contact
-**Ntale N Derick**  
-- GitHub: [Der324](https://github.com/Der324)  
-- LinkedIn: (https://www.linkedin.com/in/n-derick-ntale-57711a224/)  
-- Email: ntalenderick@gmail.com
+✨ “Where full-stack development meets digital marketing strategy.”
