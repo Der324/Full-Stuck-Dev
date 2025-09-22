@@ -1,0 +1,99 @@
+body{
+  background-color: #A9A9A9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+
+h1{
+  margin-bottom: 20px;
+  text-decoration: underline;
+
+}
+
+table{
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+tr[class="read"]{
+  background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+tr[class="to-read"]{
+  background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+tr[class="in-progress"]{
+  background-image: linear-gradient(to right, #fddb92, #d1fdff);
+  
+}
+
+span{
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"]{
+  border-radius: 6px;
+  border: 2px solid #333;
+  background-image: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+tr[class="read"] span[class="status"]{
+  border-radius: 6px;
+  border: 2px solid #333;
+  background-image: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+tr[class="in-progress"] span[class="status"]{
+  border-radius: 6px;
+  border: 2px solid #333;
+  background-image: linear-gradient(to right, #f6d365, #fda085);
+}
+
+span[class="status"], span[class^="rate"]{
+  height: 20px;
+  width: 100px;
+  min-width: 60px;
+  padding: 2px 6px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+} 
+
+span[class="status"]:hover{
+  color: #228B22;
+  cursor: pointer;
+}
+
+
+
+span[class^="rate"] > span{
+  border: 1px solid #333;
+  border-radius: 50%;
+  margin: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  display: inline-block;
+}
+
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+span[class~="two"] > span:nth-child(-n+2){
+  background-image: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+span[class~="three"] > span{
+  background-image: linear-gradient(to right, #f7971e, #ffd200);
+}
