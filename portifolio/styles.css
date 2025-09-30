@@ -1,40 +1,104 @@
+html {scroll-behavior: smooth;}
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     background: #0D0D0D;
-    color: #FFF;
+    color: #fff;
 }
 
-header{
-    background: #0D0D0D;
+.hero{ 
+    position: relative;
     text-align: center;
-    padding: 20px;
-
+    padding: 80px 20px 40px 20px;
+    background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
+                no-repeat center/cover;
+    color: white;
 }
 
-header .logo{
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px auto;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.haro-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero .logo {
+    max-width: 180px;
+    margin-bottom: 15px;
     border-radius: 10px;
 }
 
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+    color: black;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
+    color: #0D0D0D;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-link{
+    display: inlline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
+    color: #0D0D0D;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #B8860B, #D4AF37);
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background: #0D0D0D;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav a{
+nav a {
     background: linear-gradient(90deg, #D4AF37, #B8860B);
     -webkit-background-clip: text;
     background-clip: text;
@@ -43,91 +107,102 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration: underline;
 }
 
-main{
+.menu-toggle { display: none;}
+.menu-icon { 
+    display: none;
+    color: #D4AF37;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.menu-icon .close-icon{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+        background: #111;
+    }
+
+    .menu-icon {
+        display: none;
+        text-align: right;
+        padding: 0 20px;
+    }
+
+    .menu-toggle:checked ~ .menu{ display: flex;}
+    .menu-toggle:checked + .menu-icon .open-icon { display: none;}
+    .menu-toggle:checked + .menu-icon .close-icon { display: inline;}
+}
+
+main {
     padding: 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
+ section {
+    margin-bottom: 60px;
+ }
 
-section{
-    margin-bottom: 40px;
-}
-
-section h2{
+ section h2 {
     font-size: 1.8rem;
     background: linear-gradient(90deg, #D4AF37, #B8860B);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-}
+ }
 
-.card-grid{
+ .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center
+ }
+
+ .profile-pic {
+    max-width: 200px;
+    border-radius: 10px;
+ }
+
+ .about-text{ flex: 1;}
+
+ .card-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-}
+ }
 
-.card{
+ .card{
     background: #1A1A1A;
     border: 1px solid #333;
-    border-radius: 8px;
     padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover{
+    border-radius: 8px;
+    transition: 0.3s;
+ }
+ 
+ .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
-}
+ }
 
-.card h3{
-    background: linear-gradient(90deg, #D4AF37, #B8860B);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-top: 0;
-}
-
-#contact a{
-    color: #D4AF37;
-    text-decoration: none;
-}
-
-#contact a:hover{
-    text-decoration: underline;
-}
-
-footer{
+ footer {
     background: #111;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-size: 0.9rem;
-    color: #888;
-}
+ }
 
-@media(max-width: 768px){
-    section h2{
-        font-size: 1.5rem;
-    }
-
-    nav ul{
+ @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem;}
+    .about-container { 
         flex-direction: column;
-        gap: 10px;
+        text-align: center;
     }
-}
-
-@media (max-width: 480px) {
-    section h2{
-        font-size: 1.3rem;
-    }
-
-    .card{
-        padding: 15px;
-    }
-}
- 
+    .profile-pic { margin-bottom: 15px;}
+ }
