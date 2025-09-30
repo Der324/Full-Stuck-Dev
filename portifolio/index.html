@@ -7,53 +7,83 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/LOGO%20.jpg?raw=true" alt="Marktopia company logo with gold gradient text Innovate Elevate" class="logo">
+    <header class="hero">
+        <img src="https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/LOGO%20.jpg?raw=true" 
+        alt="Marktopia company logo" class="logo">
+        <h1>Innovate Elevate</h1>
+        <p>Full-Stack Developer . Digital Marketing Enthusiast</p>
+
+        <a href="#contact" class="cta-btn">Work With Me</a>
+
         <nav>
-            <ul>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#dev-projects">Development</a>
-                </li>
-                <li>
-                    <a href="#marketing-projrcts">Marketing</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon">
+                <span class="open-icon">☰</span>
+                <span class="close-icon">✖</span>
+            </label>
+
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#dev-projects">Development</a></li>
+                <li><a href="#marketing-projects">Marketing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
+
+        <section id="about" class="about">
             <h2>About Me</h2>
-            <p>I am a motivated communicator, budding full-stack developer, and digital marketing learner. 
-                With experience in customer service, loan operations, 
-                and hospitality, I bring a unique mix of client-facing and 
-                technical skills. Currently, I am advancing through the freeCodeCamp 
-                full-stack curriculum and digital marketing training. </p>
+            <div class="about-container">
+                <img src="https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/Ntale%20N.PNG?raw=true" 
+                alt="Photo of Ntale N Derick" class="profile-pic">
+
+                <div class="about-text">
+                    <p>I am <strong>Ntale N Derick</strong> acurious learner and problem-solver with a passion for both
+                    <em>technology</em>and<em>human connection</em>.My journey spans customer service, hospitality, finance,
+                    and now a full-stack development and digital marketing. this unique blend allows me to understand people, craft
+                    meaningful experience, and translate ideas into practicle solutions.</p>
+                    <p>I thrive in collaborative environment where creativity meets strategy, whether it's coding a responsive web 
+                        app, building a marketing campaign, or engaging with client across cultures. For me, technology isn't just 
+                        about lines of code rather it's about helping connect, grow, and succeed.
+                    </p>
+                    <p>
+                        Let's connect! I am always open to converstion about innovation projects, digital trends, and opportunities
+                        to collaborate.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section id="Dev-Projects">
+        <section id="dev-projects">
             <h2>Development Projects</h2>
             <div class="card-grid">
                 <div class="card">
                     <h3>Survey Form App</h3>
-                    <p>A responsive HTML5/CSS3 form built as part of 
-                        the freeCodeCamp curriculum.</p>
+                    <p>A responsive HTML5/CSS3 from built as part of the freeCodeCamp curriculum.</p>
+                    <p>
+                        <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Checkout-page/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> |
+                         <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Checkout-page" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+ 
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Checkout Page</h3>
-                    <p>A mock checkout page demonstrating accessibility
-                         and semantic HTML structure.</p>
+                    <p>A mock checkout page demostrating accessibility and semantic HTML structure.</p>
+                    <p>
+                        <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Checkout-page/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> | 
+                        <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Checkout-page" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+                    </p>
                 </div>
                 <div class="card">
                     <h3>Multimedia Player</h3>
-                    <p>Custom audio/video player with 
-                        captions and transcript support.</p>
+                    <p>Custom audio/video player with caption and transcript support.</p>
+                    <p>
+                          <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Multimedia-player/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> | 
+                            <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Multimedia-player" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -62,16 +92,17 @@
             <h2>Marketing Projects</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3>Social Media Campaingn Plan</h3>
-                    <p>Created for a fictional brand to boost engagement and awareness. </p>
-                </div>
-                <div class="card">
-                    <h3>SEO Blog Articles</h3>
+                    <h3>Social Media Campain Plan</h3>
                     <p>Created for a fictional brand to boost engagement and awareness.</p>
                 </div>
                 <div class="card">
+                    <h3>SEO Blog Articles</h3>
+                    <p>Drafted optimized content for a digital marketing website.
+                    </p>
+                </div>
+                <div class="card">
                     <h3>Brand Guidlines</h3>
-                    <p>Developed visual and tone guidelines for a fictional digital agency.</p>
+                    <p>Developed visual and tone guidlines for a fictional digital agency.</p>
                 </div>
             </div>
         </section>
@@ -79,8 +110,7 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:ntalenderick@gmail.com">ntalenderick@gmail.com</a></p>
-            <p>Phone: +250786864031</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/n-derick-ntale-57711a224/">LinkedIn/ntalenderick</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/n-derick-ntale-57711a224/">linkedin.com/in/ntalenderick</a></p>
         </section>
     </main>
 
