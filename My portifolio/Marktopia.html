@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ntale N Derick - Full-Stack Developer & Digital Marketing Enthusiast. View my development projects and marketing work.">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="msapplication-navbutton-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Ntale N Derick - Full-Stack Developer & Digital Marketer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #E8C76A;
+            --gold-dark: #B8941F;
+            --dark: #1a1a1a;
+            --dark-secondary: #2d2d2d;
+            --light: #f5f5f5;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Header & Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            color: var(--white);
+            padding: 2rem 1rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero > p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: var(--light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--gold);
+        }
+
+        .close-icon {
+            display: none;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .menu a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                background: var(--dark-secondary);
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+                border: 2px solid var(--gold);
+            }
+
+            .menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+
+            .menu-toggle:checked ~ .menu-icon .open-icon {
+                display: none;
+            }
+
+            .menu-toggle:checked ~ .menu-icon .close-icon {
+                display: inline;
+            }
+        }
+
+        /* Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--dark);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-container {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+
+        .profile-pic {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            display: block;
+            border: 4px solid var(--gold);
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .about-text strong {
+            color: var(--gold-dark);
+            font-weight: 700;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+        }
+
+        .card h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .card a {
+            color: var(--gold-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .card a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        #contact h2 {
+            color: var(--gold);
+            position: relative;
+            z-index: 1;
+        }
+
+        #contact h2::after {
+            background: var(--gold);
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        #contact a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #contact a:hover {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        .contact-cta {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-cta:hover {
+            background: var(--gold-light);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--gold);
+        }
+
+        /* Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero nav,
+            .cta-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" 
+        data-src="https://i.imgur.com/your-marktopia-logo.png"
+        alt="Marktopia - Innovate Elevate" class="logo"
+        onerror="this.src='https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/LOGO%20.jpg?raw=true'">
+        <h1>Innovate. Elevate.</h1>
+        <p>Full-Stack Developer • Digital Marketing Enthusiast</p>
+
+        <a href="#contact" class="cta-btn">Let's Build Something Amazing</a>
+
+        <nav aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+
+            <label for="menu-toggle" class="menu-icon" aria-label="Menu">
+                <span class="open-icon" aria-hidden="true">☰</span>
+                <span class="close-icon" aria-hidden="true">✖</span>
+            </label>
+
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#dev-projects">Development</a></li>
+                <li><a href="#marketing-projects">Marketing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" 
+                data-src="https://i.imgur.com/your-profile-photo.png"
+                alt="Ntale N Derick" class="profile-pic"
+                onerror="this.src='https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/Ntale%20N.PNG?raw=true'">
+
+                <div class="about-text">
+                    <p>I am <strong>Ntale N Derick</strong>, a curious learner and problem-solver with a passion for both
+                    <em>technology</em> and <em>human connection</em>. My journey spans customer service, hospitality, finance,
+                    and now full-stack development and digital marketing. This unique blend allows me to understand people, craft
+                    meaningful experiences, and translate ideas into practical solutions.</p>
+                    <p>I thrive in collaborative environments where creativity meets strategy, whether it's coding a responsive web 
+                        app, building a marketing campaign, or engaging with clients across cultures. For me, technology isn't just 
+                        about lines of code—it's about helping people connect, grow, and succeed.
+                    </p>
+                    <p>
+                        Let's connect! I'm always open to conversations about innovative projects, digital trends, and opportunities
+                        to collaborate.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dev-projects">
+            <h2>Development Projects</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Survey Form App</h3>
+                    <p>A responsive HTML5/CSS3 form built as part of the freeCodeCamp curriculum, demonstrating modern form design and validation.</p>
+                    <p>
+                        <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Checkout-page/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> |
+                         <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Checkout-page" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Checkout Page</h3>
+                    <p>A mock checkout page demonstrating accessibility best practices and semantic HTML structure for e-commerce.</p>
+                    <p>
+                        <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Checkout-page/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> | 
+                        <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Checkout-page" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Multimedia Player</h3>
+                    <p>Custom audio/video player with caption and transcript support, showcasing advanced media controls and accessibility.</p>
+                    <p>
+                          <a href="https://raw.githack.com/Der324/Full-Stuck-Dev/main/Multimedia-player/index.html" target="_blank" rel="noopener noreferrer">🔗 Live Demo</a> | 
+                            <a href="https://github.com/Der324/Full-Stuck-Dev/tree/main/Multimedia-player" target="_blank" rel="noopener noreferrer">💻 GitHub Repo</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing-projects">
+            <h2>Marketing Projects</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Social Media Campaign Plan</h3>
+                    <p>Comprehensive campaign strategy created for a fictional brand to boost engagement, reach, and brand awareness across platforms.</p>
+                </div>
+                <div class="card">
+                    <h3>SEO Blog Articles</h3>
+                    <p>Drafted optimized content for a digital marketing website, focusing on keyword research and search engine visibility.</p>
+                </div>
+                <div class="card">
+                    <h3>Brand Guidelines</h3>
+                    <p>Developed comprehensive visual identity and tone guidelines for a fictional digital agency, ensuring consistent brand communication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Work Together</h2>
+            <p>Ready to bring your ideas to life? I'm available for freelance projects, collaborations, and full-time opportunities.</p>
+            <p>📧 Email: <a href="mailto:ntalenderick@gmail.com">ntalenderick@gmail.com</a></p>
+            <p>📱 WhatsApp: <a href="https://wa.me/250786864031" target="_blank" rel="noopener noreferrer">+250 786 864 031</a></p>
+            <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/n-derick-ntale-57711a224/" target="_blank" rel="noopener noreferrer">Connect with me</a></p>
+            <a href="mailto:ntalenderick@gmail.com" class="contact-cta">Get In Touch</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ntale N Derick | Marktopia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.querySelector('.logo');
+            const profile = document.querySelector('.profile-pic');
+            
+            // Set actual image sources
+            logo.src = 'https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/LOGO%20.jpg?raw=true';
+            profile.src = 'https://github.com/Der324/Full-Stuck-Dev/blob/main/portifolio/Ntale%20N.PNG?raw=true';
+        });
+    </script>
+</body>
+</html>
