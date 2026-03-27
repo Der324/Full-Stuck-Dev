@@ -23,3 +23,6 @@ console.log(repeatedLove);
 
 const newSentence = `I ${repeatedLove} learning.`;
 console.log(newSentence);
+
+let numRoundedUp = Math.ceil(3.2);
+console.log(numRoundedUp);
